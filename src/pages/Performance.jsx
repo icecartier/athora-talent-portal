@@ -41,7 +41,6 @@ export default function Performance() {
                   {ins.type}
                 </span>
                 <span style={{ fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.08em',
-                  color: ins.impact === 'High' ? '#6EE7B7' : '#FCD34D',
                   color: ins.impact === 'High' ? '#6EE7B7' : '#FCD34D' }}>
                   {ins.impact} impact
                 </span>
