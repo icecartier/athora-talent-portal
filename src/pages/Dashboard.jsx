@@ -96,7 +96,7 @@ function ReadinessArc({ pct }) {
 // ── CORE Insight Hero ──────────────────────────────────────────────────────
 function CoreInsightHero() {
   return (
-    <div style={{
+    <div className="core-hero-flex" style={{
       background: '#111111',
       borderRadius: 16,
       padding: '20px 24px',
@@ -141,7 +141,7 @@ function CoreInsightHero() {
       </div>
 
       {/* Right — format comparison metric */}
-      <div style={{
+      <div className="core-hero-stat-box" style={{
         background: 'rgba(255,255,255,0.04)',
         border: '1px solid rgba(255,255,255,0.08)',
         borderRadius: 14,
@@ -219,7 +219,7 @@ function WeeklyCalendar() {
       </div>
 
       {/* Day columns — today gets 3× flex */}
-      <div style={{ display: 'flex', gap: 8, flex: 1 }}>
+      <div className="calendar-days-flex" style={{ display: 'flex', gap: 8, flex: 1 }}>
         {DAYS.map((day, i) => {
           const date      = weekDates[i]
           const isToday   = date.getTime() === todayDate.getTime()
@@ -231,6 +231,7 @@ function WeeklyCalendar() {
 
           return (
             <div key={day}
+              className={isToday ? 'calendar-day-col calendar-today-col' : 'calendar-day-col'}
               onClick={() => setSelectedDay(isSelected ? null : i)}
               style={{
                 flexGrow: isToday ? 3 : 1,
@@ -350,7 +351,7 @@ export default function Dashboard() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
 
       {/* ── 1. Heading row ── */}
-      <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 24 }}>
+      <div className="dash-heading-row" style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 24 }}>
         {/* Creator identity */}
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 4 }}>
@@ -369,14 +370,14 @@ export default function Dashboard() {
               </div>
             </div>
           </div>
-          <h1 style={{ fontSize: 30, fontWeight: 800, color: '#111', letterSpacing: '-0.04em', lineHeight: 1.1 }}>
+          <h1 className="dash-headline" style={{ fontSize: 30, fontWeight: 800, color: '#111', letterSpacing: '-0.04em', lineHeight: 1.1 }}>
             Welcome back, {creator.name}.
           </h1>
           <p style={{ fontSize: 11, color: '#999', marginTop: 3 }}>{todayDateStr}</p>
         </div>
 
         {/* Trajectory stats */}
-        <div style={{ display: 'flex', alignItems: 'stretch', background: '#fff',
+        <div className="trajectory-stats-card" style={{ display: 'flex', alignItems: 'stretch', background: '#fff',
           border: '1px solid #DDD9CF', borderRadius: 14, overflow: 'hidden',
           boxShadow: '0 1px 4px rgba(0,0,0,0.04)', flexShrink: 0 }}>
           {[
@@ -406,7 +407,7 @@ export default function Dashboard() {
       <CoreInsightHero />
 
       {/* ── 3. Middle row: Brand Ready + View Growth + Engagement ── */}
-      <div style={{ display: 'grid', gridTemplateColumns: '2fr 1.6fr 1.4fr', gap: 10 }}>
+      <div className="dash-middle-row" style={{ display: 'grid', gridTemplateColumns: '2fr 1.6fr 1.4fr', gap: 10 }}>
 
         {/* Brand Ready — second hero */}
         <div style={{ background: '#fff', border: '1px solid #DDD9CF', borderRadius: 14, padding: 20, display: 'flex', flexDirection: 'column' }}>
@@ -530,7 +531,7 @@ export default function Dashboard() {
       </div>
 
       {/* ── 4. Bottom row: Tasks + Calendar ── */}
-      <div style={{ display: 'grid', gridTemplateColumns: '210px 1fr', gap: 10 }}>
+      <div className="dash-bottom-row" style={{ display: 'grid', gridTemplateColumns: '210px 1fr', gap: 10 }}>
 
         {/* Tasks */}
         <div style={{ background: '#fff', border: '1px solid #DDD9CF', borderRadius: 14, padding: 18 }}>

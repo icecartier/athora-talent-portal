@@ -16,7 +16,7 @@ export default function Performance() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
 
       {/* ── CORE Insights hero ── */}
-      <div style={{ background: '#111111', borderRadius: 16, padding: '24px 28px',
+      <div className="dark-hero-card" style={{ background: '#111111', borderRadius: 16, padding: '24px 28px',
         border: '1px solid rgba(255,255,255,0.07)', boxShadow: '0 4px 24px rgba(0,0,0,0.12)' }}>
 
         {/* badge */}
@@ -29,7 +29,7 @@ export default function Performance() {
           <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.25)', marginLeft: 4 }}>What the data is saying right now</span>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 14 }}>
+        <div className="perf-insights-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: 14 }}>
           {performanceInsights.map(ins => (
             <div key={ins.id} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)',
               borderRadius: 12, padding: '16px 18px' }}>
@@ -68,7 +68,7 @@ export default function Performance() {
             const trend = TREND_CONFIG[post.trend] || TREND_CONFIG.flat
             const TrendIcon = trend.icon
             return (
-              <div key={post.id} style={{ background: '#fff', border: '1px solid #DDD9CF', borderRadius: 14, padding: '16px 20px',
+              <div key={post.id} className="recent-post-grid" style={{ background: '#fff', border: '1px solid #DDD9CF', borderRadius: 14, padding: '16px 20px',
                 display: 'grid', gridTemplateColumns: '1fr 80px 80px 200px', gap: 16, alignItems: 'center' }}>
 
                 {/* Title + meta */}
@@ -99,7 +99,7 @@ export default function Performance() {
                 </div>
 
                 {/* CORE note */}
-                <div style={{ background: 'rgba(124,58,237,0.05)', border: '1px solid rgba(124,58,237,0.12)',
+                <div className="recent-post-core-col" style={{ background: 'rgba(124,58,237,0.05)', border: '1px solid rgba(124,58,237,0.12)',
                   borderRadius: 8, padding: '8px 10px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 5, marginBottom: 4 }}>
                     <span style={{ width: 5, height: 5, borderRadius: '50%', background: '#7C3AED', display: 'inline-block', flexShrink: 0 }} />
@@ -114,7 +114,7 @@ export default function Performance() {
       </div>
 
       {/* ── 2-col: Chart + Format breakdown ── */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 14 }}>
+      <div className="perf-chart-row" style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 14 }}>
 
         {/* Daily views chart */}
         <div style={{ background: '#fff', border: '1px solid #DDD9CF', borderRadius: 14, padding: 20 }}>
@@ -204,7 +204,7 @@ export default function Performance() {
       </div>
 
       {/* ── Quick stats bar ── */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10 }}>
+      <div className="perf-stats-row" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10 }}>
         {[
           { label: 'Avg Views',      value: growth.avgViews.toLocaleString(), note: 'per post' },
           { label: 'Engagement',     value: `${growth.avgEngagementRate}%`,   note: 'above average' },

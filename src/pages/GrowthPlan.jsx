@@ -9,7 +9,7 @@ export default function GrowthPlan() {
   return (
     <div>
       <h1 style={{ fontSize: 18, fontWeight: 700, color: '#111', letterSpacing: '-0.02em', marginBottom: 14 }}>Growth Plan</h1>
-      <div className="grid grid-cols-[1fr_340px] gap-4">
+      <div className="growth-main-grid grid grid-cols-[1fr_340px] gap-4">
         <div className="flex flex-col gap-4">
           <Card hover={false}>
             <Badge variant="primary" className="mb-3">{growthPlan.currentPhase}</Badge>

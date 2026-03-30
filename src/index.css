@@ -27,3 +27,184 @@ html, body, #root {
 ::-webkit-scrollbar-track { background: #F0EDE6; }
 ::-webkit-scrollbar-thumb { background: #DDD9CF; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #C8C4BC; }
+
+/* ── Bottom nav: desktop = hidden, mobile = visible ── */
+.mobile-bottom-nav-wrapper { display: none; }
+
+/* =====================================================
+   MOBILE RESPONSIVE  (≤ 768px)
+   ===================================================== */
+@media (max-width: 768px) {
+
+  /* ── Bottom nav ── */
+  .mobile-bottom-nav-wrapper { display: block; }
+
+  /* ── Main content: extra bottom padding for bottom nav ── */
+  .main-content { padding-bottom: 72px !important; }
+  .main-pad { padding: 12px !important; }
+
+  /* ── TopBar: hide desktop nav, keep logo + avatar ── */
+  .topbar-nav-items { display: none !important; }
+  .topbar-icon-btn  { display: none !important; }
+
+  /* ── CORE hero: stack on mobile ── */
+  .core-hero-flex {
+    flex-direction: column !important;
+    gap: 16px !important;
+    align-items: flex-start !important;
+  }
+  .core-hero-stat-box {
+    width: 100% !important;
+    min-width: unset !important;
+    flex-shrink: unset !important;
+    text-align: left !important;
+  }
+  .core-hero-stat-box > div:first-child {
+    justify-content: flex-start !important;
+  }
+  /* dark hero card — reduce padding on mobile */
+  .dark-hero-card {
+    padding: 18px 16px !important;
+  }
+
+  /* ── Dashboard: heading row ── */
+  .dash-heading-row {
+    flex-direction: column !important;
+    gap: 14px !important;
+    align-items: flex-start !important;
+  }
+  .trajectory-stats-card {
+    width: 100% !important;
+    flex-shrink: unset !important;
+    overflow-x: auto !important;
+  }
+  .trajectory-stat-item {
+    padding: 10px 16px !important;
+  }
+  .dash-headline {
+    font-size: 24px !important;
+  }
+
+  /* ── Dashboard: middle 3-col → single col ── */
+  .dash-middle-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Dashboard: tasks + calendar row → stacked ── */
+  .dash-bottom-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Calendar: horizontal scroll ── */
+  .calendar-days-flex {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    gap: 5px !important;
+    padding-bottom: 6px !important;
+  }
+  .calendar-day-col {
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+    min-width: 72px !important;
+    min-height: 180px !important;
+  }
+  .calendar-today-col {
+    flex-grow: 0 !important;
+    min-width: 148px !important;
+  }
+
+  /* ── Performance: CORE insights 3-col → stacked ── */
+  .perf-insights-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Performance: recent post row → stacked ── */
+  .recent-post-grid {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+  /* hide CORE note column on mobile (shown inline instead) */
+  .recent-post-core-col {
+    display: none !important;
+  }
+
+  /* ── Performance: chart + format → stacked ── */
+  .perf-chart-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Performance: quick stats 4-col → 2-col ── */
+  .perf-stats-row {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* ── Content Engine: idea card 3-col → stacked ── */
+  .ce-idea-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Profile: main 2-col → stacked ── */
+  .profile-main-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Profile: MATCH hero flex → stacked ── */
+  .match-hero-flex {
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: flex-start !important;
+  }
+  .match-sub-scores {
+    max-width: 100% !important;
+  }
+  .match-unlocks-card {
+    width: 100% !important;
+    min-width: unset !important;
+  }
+
+  /* ── Profile: audience 3-col stays (compact) ── */
+  .audience-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
+  /* ── Profile: strengths + areas 2-col → stacked ── */
+  .profile-sub-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Content Engine: core stats flex ── */
+  .ce-core-stats {
+    flex-wrap: wrap !important;
+  }
+  .ce-core-stats > div {
+    flex: 1 !important;
+    min-width: 90px !important;
+  }
+
+  /* ── Opportunities: countdown row ── */
+  .opp-hero-countdown {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+  }
+  .opp-countdown-big {
+    font-size: 56px !important;
+  }
+  .opp-hero-stats {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+
+  /* ── Opportunities: 2-col sections → stacked ── */
+  .opp-two-col {
+    grid-template-columns: 1fr !important;
+  }
+  .opp-brands-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── Growth Plan: main 2-col → stacked ── */
+  .growth-main-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

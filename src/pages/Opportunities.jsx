@@ -28,7 +28,7 @@ export default function Opportunities() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
 
       {/* ── Countdown hero ── */}
-      <div style={{ background: '#111111', borderRadius: 16, padding: '28px 32px',
+      <div className="dark-hero-card" style={{ background: '#111111', borderRadius: 16, padding: '28px 32px',
         border: '1px solid rgba(255,255,255,0.07)', boxShadow: '0 4px 24px rgba(0,0,0,0.12)' }}>
 
         {/* MATCH badge */}
@@ -45,9 +45,9 @@ export default function Opportunities() {
         <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.45)', marginBottom: 8, fontWeight: 500 }}>
           You're on track to unlock brand deals in
         </p>
-        <div style={{ display: 'flex', alignItems: 'flex-end', gap: 20, marginBottom: 20 }}>
+        <div className="opp-hero-countdown" style={{ display: 'flex', alignItems: 'flex-end', gap: 20, marginBottom: 20 }}>
           <div style={{ display: 'flex', alignItems: 'flex-end', gap: 12 }}>
-            <span style={{ fontSize: 80, fontWeight: 800, color: 'white', lineHeight: 1, letterSpacing: '-0.04em' }}>
+            <span className="opp-countdown-big" style={{ fontSize: 80, fontWeight: 800, color: 'white', lineHeight: 1, letterSpacing: '-0.04em' }}>
               {weeksToUnlock}
             </span>
             <div style={{ paddingBottom: 12 }}>
@@ -55,7 +55,7 @@ export default function Opportunities() {
               <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.3)', marginTop: 4 }}>Est. {unlockDate}</p>
             </div>
           </div>
-          <div style={{ marginLeft: 'auto', display: 'flex', gap: 12 }}>
+          <div className="opp-hero-stats" style={{ marginLeft: 'auto', display: 'flex', gap: 12 }}>
             <div style={{ background: 'rgba(124,58,237,0.18)', border: '1px solid rgba(124,58,237,0.3)',
               borderRadius: 12, padding: '12px 18px', textAlign: 'center' }}>
               <p style={{ fontSize: 26, fontWeight: 800, color: '#A78BFA', lineHeight: 1 }}>+340</p>
@@ -80,7 +80,7 @@ export default function Opportunities() {
       </div>
 
       {/* ── 2-col: Accelerators + What to do ── */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+      <div className="opp-two-col" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
 
         {/* Growth signals */}
         <div style={{ background: '#fff', border: '1px solid #DDD9CF', borderRadius: 14, padding: 20 }}>
@@ -147,7 +147,7 @@ export default function Opportunities() {
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+        <div className="opp-brands-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
           {previewBrands.map(opp => (
             <div key={opp.id} style={{ position: 'relative', borderRadius: 14, overflow: 'hidden' }}>
               {/* Blurred card */}

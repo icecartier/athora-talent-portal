@@ -39,7 +39,7 @@ export default function ContentEngine() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
 
       {/* ── CORE attribution hero ── */}
-      <div style={{ background: '#111111', borderRadius: 16, padding: '22px 28px',
+      <div className="dark-hero-card" style={{ background: '#111111', borderRadius: 16, padding: '22px 28px',
         border: '1px solid rgba(255,255,255,0.07)', boxShadow: '0 4px 24px rgba(0,0,0,0.12)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 12 }}>
           <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#7C3AED', display: 'inline-block',
@@ -55,7 +55,7 @@ export default function ContentEngine() {
         <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', lineHeight: 1.7 }}>
           {insight.detail}
         </p>
-        <div style={{ display: 'flex', gap: 10, marginTop: 16 }}>
+        <div className="ce-core-stats" style={{ display: 'flex', gap: 10, marginTop: 16 }}>
           {[
             { label: 'POV avg views', value: '11.3k', accent: true },
             { label: 'Other avg views', value: '5.4k', accent: false },
@@ -99,7 +99,7 @@ export default function ContentEngine() {
             const perf = PERF_CONFIG[s.estimatedPerformance] || PERF_CONFIG['Medium']
             const fmtColor = FORMAT_COLOR[s.format] || '#888'
             return (
-              <div key={s.id} style={{ background: '#fff', border: '1px solid #DDD9CF', borderRadius: 14,
+              <div key={s.id} className="ce-idea-card" style={{ background: '#fff', border: '1px solid #DDD9CF', borderRadius: 14,
                 padding: '18px 20px', display: 'grid', gridTemplateColumns: '1fr 160px 180px', gap: 16, alignItems: 'start' }}>
 
                 {/* Title + meta */}

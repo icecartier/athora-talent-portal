@@ -41,7 +41,7 @@ export default function Profile() {
     <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
 
       {/* ── MATCH Score hero ── */}
-      <div style={{ background: '#111111', borderRadius: 16, padding: '28px 32px',
+      <div className="dark-hero-card" style={{ background: '#111111', borderRadius: 16, padding: '28px 32px',
         border: '1px solid rgba(255,255,255,0.07)', boxShadow: '0 4px 24px rgba(0,0,0,0.12)' }}>
 
         <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 20 }}>
@@ -53,10 +53,10 @@ export default function Profile() {
           <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.25)', marginLeft: 4 }}>Brand deal compatibility score</span>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: 36 }}>
+        <div className="match-hero-flex" style={{ display: 'flex', alignItems: 'center', gap: 36 }}>
           <MatchArc value={profile.matchReadiness} />
 
-          <div style={{ flex: 1 }}>
+          <div className="match-sub-scores" style={{ flex: 1 }}>
             <p style={{ fontSize: 24, fontWeight: 800, color: 'white', lineHeight: 1.2, marginBottom: 6 }}>
               You're <span style={{ color: '#A78BFA' }}>Rising</span> — 38 points from Brand Ready
             </p>
@@ -72,7 +72,7 @@ export default function Profile() {
           </div>
 
           {/* What unlocks next */}
-          <div style={{ background: 'rgba(124,58,237,0.15)', border: '1px solid rgba(124,58,237,0.3)',
+          <div className="match-unlocks-card" style={{ background: 'rgba(124,58,237,0.15)', border: '1px solid rgba(124,58,237,0.3)',
             borderRadius: 14, padding: '20px 22px', minWidth: 200 }}>
             <p style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.5)',
               textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 14 }}>Unlocks next</p>
@@ -95,7 +95,7 @@ export default function Profile() {
       </div>
 
       {/* ── 2-col: Identity + Audience ── */}
-      <div style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: 14 }}>
+      <div className="profile-main-grid" style={{ display: 'grid', gridTemplateColumns: '280px 1fr', gap: 14 }}>
 
         {/* Creator identity card */}
         <div style={{ background: '#fff', border: '1px solid #DDD9CF', borderRadius: 14, padding: 24,
@@ -148,7 +148,7 @@ export default function Profile() {
               <p style={{ fontSize: 11, color: '#888' }}>What brands are actually paying for</p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, marginBottom: 16 }}>
+            <div className="audience-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 12, marginBottom: 16 }}>
               {[
                 { icon: Users, label: 'Audience',    value: '12.4k', note: 'Instagram followers', color: '#7C3AED' },
                 { icon: Eye,   label: 'Avg Reach',   value: '8,200',  note: 'views per post',      color: '#059669' },
@@ -178,7 +178,7 @@ export default function Profile() {
           </div>
 
           {/* Strengths + Areas */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+          <div className="profile-sub-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
             <div style={{ background: '#fff', border: '1px solid #DDD9CF', borderRadius: 14, padding: '18px 20px' }}>
               <p style={{ fontSize: 13, fontWeight: 700, color: '#111', marginBottom: 14 }}>Strengths</p>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>

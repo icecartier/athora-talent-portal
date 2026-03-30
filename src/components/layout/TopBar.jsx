@@ -19,8 +19,8 @@ export default function TopBar() {
         ATHORA<span className="text-primary">.</span>
       </span>
 
-      {/* Nav */}
-      <nav className="flex items-center gap-1 flex-1">
+      {/* Nav — hidden on mobile */}
+      <nav className="topbar-nav-items flex items-center gap-1 flex-1">
         {navItems.map(({ to, label }) => (
           <NavLink
             key={to}
@@ -39,10 +39,10 @@ export default function TopBar() {
 
       {/* Right icons */}
       <div className="flex items-center gap-2 ml-auto">
-        <button className="w-7 h-7 bg-cream border border-cream-border rounded-lg flex items-center justify-center text-text-sub hover:bg-cream-deep transition-colors">
+        <button className="topbar-icon-btn w-7 h-7 bg-cream border border-cream-border rounded-lg flex items-center justify-center text-text-sub hover:bg-cream-deep transition-colors">
           <Bell size={14} strokeWidth={2} />
         </button>
-        <button className="w-7 h-7 bg-cream border border-cream-border rounded-lg flex items-center justify-center text-text-sub hover:bg-cream-deep transition-colors">
+        <button className="topbar-icon-btn w-7 h-7 bg-cream border border-cream-border rounded-lg flex items-center justify-center text-text-sub hover:bg-cream-deep transition-colors">
           <Search size={14} strokeWidth={2} />
         </button>
         <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-[11px] font-bold text-white ml-1">
