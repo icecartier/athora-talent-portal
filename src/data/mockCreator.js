@@ -21,10 +21,10 @@ export const growth = {
 }
 
 export const todaysTasks = [
-  { id: 1, task: "Post your Monday POV hook video", done: false, priority: "high" },
-  { id: 2, task: "Reply to top 10 comments from weekend posts", done: true, priority: "medium" },
-  { id: 3, task: "Film B-roll for Wednesday's carousel", done: false, priority: "medium" },
-  { id: 4, task: "Review this week's content plan in Growth Plan", done: false, priority: "low" }
+  { id: 1, task: "Post your Monday POV hook video", done: false, priority: "high", importance: 3 },
+  { id: 2, task: "Reply to top 10 comments from weekend posts", done: true, priority: "medium", importance: 2 },
+  { id: 3, task: "Film B-roll for Wednesday's carousel", done: false, priority: "medium", importance: 2 },
+  { id: 4, task: "Review this week's content plan in Growth Plan", done: false, priority: "low", importance: 1 }
 ]
 
 export const insight = {
@@ -111,6 +111,14 @@ export const dailyViewHistory = [
   { day: "Mar 29", views: 6800 },
 ]
 
+export const recentPosts = [
+  { id: 1, type: 'Reel',     format: 'POV',        title: "POV: You've been training wrong for 3 years",     date: 'Mar 28', views: 11300, engagement: 6.2, trend: 'up',   coreNote: 'Best POV performance to date — hook landed in the first 2 seconds. High completion rate drove the reach spike.' },
+  { id: 2, type: 'Carousel', format: 'Educational', title: '5 mistakes killing your gains (with fixes)',       date: 'Mar 25', views: 8400,  engagement: 5.1, trend: 'up',   coreNote: 'Save rate 3.2× above your average. Educational carousels are your strongest profile-visit driver.' },
+  { id: 3, type: 'Reel',     format: 'Experiment',  title: 'I trained fasted for 30 days — here\'s what happened', date: 'Mar 21', views: 9200, engagement: 4.8, trend: 'up',  coreNote: 'Experiment format above average. Shares drove ~40% of reach — this format has strong discovery potential.' },
+  { id: 4, type: 'Reel',     format: 'Talking Head', title: 'Morning routine that changed my physique',       date: 'Mar 18', views: 4100,  engagement: 3.2, trend: 'down', coreNote: 'Talking-head underperforming vs your POV content by 63%. Consider switching to POV framing for this topic.' },
+  { id: 5, type: 'Story',    format: 'BTS',          title: 'Behind the scenes — how I plan my training week', date: 'Mar 17', views: 7800,  engagement: 4.9, trend: 'up',   coreNote: 'Story engagement high. Authenticity content drives DMs and trust — keep this in your weekly mix.' },
+]
+
 export const performanceHistory = [
   { week: "Jan W3", views: 5200, engagement: 3.8, followers: 11060 },
   { week: "Jan W4", views: 6100, engagement: 4.1, followers: 11280 },
@@ -171,54 +179,54 @@ export const growthPlan = {
     {
       day: "Monday", content: "POV Hook Reel", priority: "high",
       entries: [
-        { type: "Reel", title: "POV Hook Reel", priority: "high" },
-        { type: "Task", title: "Reply to top 10 comments", priority: "medium" },
-        { type: "Task", title: "Check analytics from Sunday post", priority: "low" },
+        { type: "Reel",    title: "POV Hook Reel",                   priority: "high",   importance: 3 },
+        { type: "Task",    title: "Reply to top 10 comments",         priority: "medium", importance: 2 },
+        { type: "Task",    title: "Check analytics from Sunday post", priority: "low",    importance: 1 },
       ]
     },
     {
       day: "Tuesday", content: "Story Series (BTS)", priority: "low",
       entries: [
-        { type: "Story", title: "Behind the scenes — morning workout", priority: "low" },
-        { type: "Task", title: "Film B-roll for Wednesday carousel", priority: "medium" },
+        { type: "Story",   title: "Behind the scenes — morning workout", priority: "low",    importance: 1 },
+        { type: "Task",    title: "Film B-roll for Wednesday carousel",  priority: "medium", importance: 2 },
       ]
     },
     {
       day: "Wednesday", content: "Educational Carousel", priority: "high",
       entries: [
-        { type: "Carousel", title: "5 mistakes killing your gains", priority: "high" },
-        { type: "Task", title: "Engage with similar creators", priority: "medium" },
-        { type: "Task", title: "Plan Friday reel concept", priority: "low" },
+        { type: "Carousel", title: "5 mistakes killing your gains",  priority: "high",   importance: 3 },
+        { type: "Task",     title: "Engage with similar creators",   priority: "medium", importance: 2 },
+        { type: "Task",     title: "Plan Friday reel concept",       priority: "low",    importance: 1 },
       ]
     },
     {
       day: "Thursday", content: "Engage only — no post", priority: "none",
       entries: [
-        { type: "Task", title: "Respond to DMs & story replies", priority: "medium" },
-        { type: "Task", title: "Review weekly stats", priority: "low" },
+        { type: "Task", title: "Respond to DMs & story replies", priority: "medium", importance: 2 },
+        { type: "Task", title: "Review weekly stats",            priority: "low",    importance: 1 },
       ]
     },
     {
       day: "Friday", content: "Transformation or Experiment Reel", priority: "high",
       entries: [
-        { type: "Reel", title: "Transformation — 30-day progress", priority: "high" },
-        { type: "Story", title: "Post-upload story CTA", priority: "medium" },
-        { type: "Task", title: "Reply to first 30 min comments", priority: "high" },
+        { type: "Reel",  title: "Transformation — 30-day progress",  priority: "high",   importance: 3 },
+        { type: "Story", title: "Post-upload story CTA",             priority: "medium", importance: 2 },
+        { type: "Task",  title: "Reply to first 30 min comments",    priority: "high",   importance: 3 },
       ]
     },
     {
       day: "Saturday", content: "Story Q&A or Poll", priority: "low",
       entries: [
-        { type: "Story", title: "Q&A — ask me anything", priority: "low" },
-        { type: "Task", title: "Batch-film content for next week", priority: "medium" },
+        { type: "Story", title: "Q&A — ask me anything",           priority: "low",    importance: 1 },
+        { type: "Task",  title: "Batch-film content for next week", priority: "medium", importance: 2 },
       ]
     },
     {
       day: "Sunday", content: "Motivational / Recap content", priority: "medium",
       entries: [
-        { type: "Reel", title: "Motivational recap — week wins", priority: "medium" },
-        { type: "Task", title: "Plan next week's schedule", priority: "high" },
-        { type: "Task", title: "Check growth plan milestones", priority: "low" },
+        { type: "Reel", title: "Motivational recap — week wins",   priority: "medium", importance: 2 },
+        { type: "Task", title: "Plan next week's schedule",        priority: "high",   importance: 3 },
+        { type: "Task", title: "Check growth plan milestones",     priority: "low",    importance: 1 },
       ]
     }
   ],

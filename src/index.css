@@ -16,6 +16,12 @@ html, body, #root {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* CORE pulse animation */
+@keyframes core-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.35; transform: scale(0.75); }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: #F0EDE6; }
